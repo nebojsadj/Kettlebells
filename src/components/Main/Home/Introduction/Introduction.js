@@ -1,9 +1,16 @@
 import React from "react";
-import { Container, Box1, Box2, Hr, P, Button1, Button2 } from "./HomeStyles";
-import { Image } from "react-bootstrap";
-import bell from "../Header/girjaWoman.jpg";
+import {
+  Container,
+  Box1,
+  Box2,
+  Button1,
+  Button2,
+  Hr,
+  P,
+} from "./IntroductionStyled";
+import bell from "./girjaWoman.jpg";
 
-function Home() {
+function Introduction() {
   return (
     <Container>
       <Box1>
@@ -13,16 +20,16 @@ function Home() {
         <Hr />
         <P>
           We are here for you to participate together in your selection and find
-          the right Girja for you
+          the right kettlebell for you
         </P>
         <Button1>See more details</Button1> <br />
         <Button2>Seek advice</Button2>
       </Box1>
       <Box2>
-        <Image src={bell} />
+        <img src={bell} />
       </Box2>
     </Container>
   );
 }
 
-export default Home;
+export default Introduction;

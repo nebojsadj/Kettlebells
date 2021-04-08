@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const Logo = styled.div`
-  background: #1a237e;
-  color: #82b1ff;
+  background: black;
+  color: white;
   text-align: center;
   padding: 1em;
   font-size: 36px;
@@ -22,11 +22,11 @@ export const Navbar = styled(Logo)`
 `;
 
 export const NavLinks = styled(NavLink)`
-  color: #82b1ff;
+  color: white;
   text-decoration: none;
   font-size: 20px;
 
   &:hover {
-    color: white;
+    color: #aaa;
   }
 `;

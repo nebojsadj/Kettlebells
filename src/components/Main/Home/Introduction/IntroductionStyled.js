@@ -26,6 +26,7 @@ export const Box2 = styled.div`
 export const Hr = styled.hr`
   width: 60%;
   margin-top: 30px;
+  margin-left: 25px;
   border: 3px double black;
 `;
 
