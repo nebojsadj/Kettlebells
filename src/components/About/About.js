@@ -1,19 +1,20 @@
 import React from "react";
-import { Container, Box1, Box2, P } from "./AboutStyles";
-import kettlebell from "./kettlebell.png";
+import { Container, BoxLeft, BoxRight, Heading, Paragraph } from "./AboutStyle";
+import kettlebells from "../../pictures/kettlebells.jpg";
 
 function About() {
   return (
-    <Container>
-      <Box1>
-        <h4>What exactly are kettlebells?</h4>
-        <P>
+    <Container id="about">
+      <BoxLeft>
+        <Heading>What exactly are kettlebells?</Heading>
+        <Paragraph>
           Kettlebell (eng), girja (rus) or Russian bell is a seemingly ordinary
           ball, cast from iron with a handle. Due to its specific shape and
           shifted center of gravity, the kettlebell has incomparable advantages
           during exercise compared to classic dumbbells.
-        </P>
-        <P>
+        </Paragraph>
+        <br />
+        <Paragraph>
           Girje is a Russian traditional exercise prop that dates back to
           tsarist Russia. They became extremely popular at the beginning of the
           20th century among the then strongmen and bodybuilders (Eugen Sandow),
@@ -24,8 +25,9 @@ function About() {
           Alexander Karelin, the holder of 3 gold and 1 silver medal at the
           Olympics. This heavyweight attributed his readiness and strength to
           working with weights, although he worked with 2 x 60 kg.
-        </P>
-        <P>
+        </Paragraph>
+        <br />
+        <Paragraph>
           Exercising with kettlebells consumes a lot of calories, and that
           number can reach up to 1500 cal / h. Such high calorie consumption
           speeds up metabolism and encourages the burning of subcutaneous fat.
@@ -33,11 +35,11 @@ function About() {
           properties, where the abdominal and back muscles are in constant
           contraction, because they have to stabilize the weight and movement of
           the dumbbell.
-        </P>
-      </Box1>
-      <Box2>
-        <img src={kettlebell} />
-      </Box2>
+        </Paragraph>
+      </BoxLeft>
+      <BoxRight>
+        <img src={kettlebells} alt={kettlebells} />
+      </BoxRight>
     </Container>
   );
 }
