@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #fff;
-  min-height: 900px;
+  min-height: 550px;
 `;
 
 export const BoxContainer = styled.div`
   background-color: #fff;
-  min-height: 900px;
   display: flex;
   justify-content: center;
 `;
