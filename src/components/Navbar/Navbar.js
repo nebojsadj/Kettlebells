@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   Nav,
   NavbarContainer,
@@ -8,13 +7,16 @@ import {
   NavItem,
   NavLink,
 } from "./NavbarStyle";
+import { animateScroll as Scroll } from "react-scroll";
 
 function Navbar() {
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">Kettlebell</NavLogo>
+          <NavLogo to="/" onClick={() => Scroll.scrollToTop()}>
+            Kettlebell
+          </NavLogo>
           <NavMenu>
             <NavItem>
               <NavLink
