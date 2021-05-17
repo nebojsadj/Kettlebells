@@ -26,7 +26,7 @@ export const NavbarContainer = styled.div`
 export const NavLogo = styled(LinkR)`
   color: #c62828;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.7em;
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -52,4 +52,17 @@ export const NavItem = styled.li`
 export const NavLink = styled(LinkS)`
   color: #fff;
   cursor: pointer;
+`;
+
+export const Button = styled.button`
+  font-size: 1em;
+  padding: 0.5em 0.8em;
+  cursor: pointer;
+  border: none;
+  background-color: #c62828;
+  color: #fff;
+
+  &:hover {
+    background-color: #a91a1a;
+  }
 `;

@@ -6,10 +6,12 @@ import {
   NavMenu,
   NavItem,
   NavLink,
+  Button,
 } from "./NavbarStyle";
 import { animateScroll as Scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ contact }) {
   return (
     <>
       <Nav>
@@ -18,41 +20,50 @@ function Navbar() {
             Kettlebell
           </NavLogo>
           <NavMenu>
+            {contact || (
+              <>
+                <NavItem>
+                  <NavLink
+                    to="home"
+                    smooth={true}
+                    offset={-80}
+                    spy={true}
+                    exact="true"
+                    duration={1000}
+                  >
+                    Home
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    to="about"
+                    smooth={true}
+                    offset={-80}
+                    spy={true}
+                    exact="true"
+                    duration={1000}
+                  >
+                    About
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    to="types"
+                    smooth={true}
+                    offset={-80}
+                    spy={true}
+                    exact="true"
+                    duration={1000}
+                  >
+                    Types
+                  </NavLink>
+                </NavItem>
+              </>
+            )}
             <NavItem>
-              <NavLink
-                to="home"
-                smooth={true}
-                offset={-80}
-                spy={true}
-                exact="true"
-                duration={1200}
-              >
-                Home
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                to="about"
-                smooth={true}
-                offset={-80}
-                spy={true}
-                exact="true"
-                duration={1200}
-              >
-                About
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                to="types"
-                smooth={true}
-                offset={-80}
-                spy={true}
-                exact="true"
-                duration={1200}
-              >
-                Types
-              </NavLink>
+              <Link to="/contact">
+                <Button onClick={() => Scroll.scrollToTop()}>Contact</Button>
+              </Link>
             </NavItem>
           </NavMenu>
         </NavbarContainer>
