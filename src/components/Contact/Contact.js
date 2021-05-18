@@ -23,6 +23,7 @@ function Contact() {
       <Heading>Let's find the right kettlebell for you together!</Heading>
       <img
         src={contactUs}
+        alt={contactUs}
         style={{ width: "35%", display: "block", margin: "50px auto" }}
       />
       <Paragraph>Contact us!</Paragraph>

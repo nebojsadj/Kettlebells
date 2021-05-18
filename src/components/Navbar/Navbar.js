@@ -9,9 +9,10 @@ import {
   Button,
 } from "./NavbarStyle";
 import { animateScroll as Scroll } from "react-scroll";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
-function Navbar({ contact }) {
+function Navbar({ secondRoute, more }) {
+  const history = useHistory();
   return (
     <>
       <Nav>
@@ -20,7 +21,7 @@ function Navbar({ contact }) {
             Kettlebell
           </NavLogo>
           <NavMenu>
-            {contact || (
+            {secondRoute || (
               <>
                 <NavItem>
                   <NavLink
@@ -59,6 +60,11 @@ function Navbar({ contact }) {
                   </NavLink>
                 </NavItem>
               </>
+            )}
+            {more && (
+              <NavItem>
+                <Button onClick={() => history.goBack()}>Go Back</Button>
+              </NavItem>
             )}
             <NavItem>
               <Link to="/contact">

@@ -9,8 +9,10 @@ import {
 } from "./TypesStyle";
 import regular from "../../pictures/regular.png";
 import competition from "../../pictures/competition.jpg";
+import { useHistory } from "react-router-dom";
 
 function Types() {
+  const history = useHistory();
   return (
     <Container id="types">
       <Heading>We distinguish two types of kettlebells</Heading>
@@ -23,7 +25,7 @@ function Types() {
             kettlebells but have a slightly thicker handle. They are used in
             Cross Fit and various strength trainings.
           </Paragraph>
-          <Button>View more</Button>
+          <Button onClick={() => history.push("/regular")}>View more</Button>
         </Box>
         <Box>
           <img src={competition} alt={competition} />
@@ -34,7 +36,9 @@ function Types() {
             thinner handle than regular weights. They are made for Girevoy
             sport, but they are used in the same way as regular ones.
           </Paragraph>
-          <Button>View more</Button>
+          <Button onClick={() => history.push("/competition")}>
+            View more
+          </Button>
         </Box>
       </BoxContainer>
     </Container>
