@@ -2,6 +2,7 @@ import React from "react";
 import { Route } from "react-router";
 import Competition from "./components/Competition/Competition";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 import Kettlebells from "./components/Kettlebells/Kettlebells";
 import Navbar from "./components/Navbar/Navbar";
 import Regular from "./components/Regular/Regular";
@@ -24,6 +25,7 @@ function App() {
         <Navbar secondRoute={true} more={true} />
         <Regular />
       </Route>
+      <Footer />
     </>
   );
 }
