@@ -1,11 +1,19 @@
 import React from "react";
-import { Container, BoxLeft, BoxRight, Heading, Paragraph } from "./AboutStyle";
+import {
+  Container,
+  BoxTop,
+  BoxLeft,
+  BoxRight,
+  Holder,
+  Heading,
+  Paragraph,
+} from "./AboutStyle";
 import kettlebells from "../../pictures/kettlebells.jpg";
 
 function About() {
   return (
     <Container id="about">
-      <BoxLeft>
+      <BoxTop>
         <Heading>What exactly are kettlebells?</Heading>
         <Paragraph>
           Kettlebell (eng), girja (rus) or Russian bell is a seemingly ordinary
@@ -36,10 +44,21 @@ function About() {
           contraction, because they have to stabilize the weight and movement of
           the dumbbell.
         </Paragraph>
-      </BoxLeft>
-      <BoxRight>
-        <img src={kettlebells} alt={kettlebells} />
-      </BoxRight>
+      </BoxTop>
+      <Holder>
+        <BoxLeft>
+          <img src={kettlebells} alt={kettlebells} />
+        </BoxLeft>
+        <BoxRight>
+          <iframe
+            src="https://www.youtube.com/embed/RE6CSomDvl8"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </BoxRight>
+      </Holder>
     </Container>
   );
 }

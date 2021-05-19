@@ -14,6 +14,20 @@ export const ListContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 0.9em;
+  }
+  @media screen and (max-width: 768px) {
+    padding-top: 3em;
+    padding-bottom: 4em;
+    flex-direction: column;
+    justify-content: center;
+
+    ul {
+      text-align: center;
+    }
+  }
 `;
 
 export const Heading = styled.h2`

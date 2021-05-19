@@ -21,11 +21,7 @@ function Contact() {
   return (
     <Container>
       <Heading>Let's find the right kettlebell for you together!</Heading>
-      <img
-        src={contactUs}
-        alt={contactUs}
-        style={{ width: "35%", display: "block", margin: "50px auto" }}
-      />
+      <img src={contactUs} alt={contactUs} />
       <Paragraph>Contact us!</Paragraph>
       <Form onSubmit={onSubmit}>
         <Input type="text" placeholder="name" />

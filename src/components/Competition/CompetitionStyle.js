@@ -1,8 +1,17 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
+  /* display: flex; */
   /* flex-wrap: wrap; */
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const BoxLeft = styled.div`
@@ -14,15 +23,68 @@ export const BoxLeft = styled.div`
     display: block;
     margin: auto;
   }
+  @media screen and (max-width: 1440px) {
+    padding: 5em 2em;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 5em 1em;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 2em 1em;
+    img {
+      width: 80%;
+    }
+  }
 `;
 
 export const BoxRight = styled.div`
   flex: 50%;
   padding: 5em;
+  margin-top: 50px;
+
+  @media screen and (max-width: 1440px) {
+    padding: 5em 2em;
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 5em 1em;
+    margin-top: 10px;
+    h2 {
+      font-size: 1.8em;
+      padding-top: 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    align-items: center;
+    padding: 0 1em 3em 1em;
+    select {
+      width: 100%;
+    }
+  }
+`;
+
+export const BoxBottom = styled.div`
+  width: 70%;
+  border: 1px solid #000;
+  margin: auto;
+  margin-bottom: 5em;
+  padding: 2em 3em;
+  p > span {
+    color: red;
+  }
+  h2 {
+    padding-top: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 60%;
+    padding: 1em 1em;
+  }
 `;
 
 export const Heading = styled.h2`
-  padding-top: 2.5em;
+  padding-top: 1.6em;
   font-size: 2em;
 `;
 
@@ -39,6 +101,14 @@ export const Holder = styled.div`
   margin-top: 2em;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const ButtonGroup = styled.div`
@@ -58,12 +128,12 @@ export const Button = styled.button`
   ${(prop) =>
     prop.disabled &&
     css`
-      opacity: 0.8;
+      opacity: 0.7;
     `};
 
   &:hover {
     background-color: ${(props) => (props.disabled ? "#c62828" : "#a91a1a")};
-    cursor: ${(props) => !props.disabled && "pointer"};
+    cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   }
 `;
 
@@ -79,7 +149,7 @@ export const Input = styled.input`
 `;
 
 export const BuyBtn = styled.button`
-  width: 110px;
+  width: 20%;
   height: 1.5em;
   font-size: 1.3em;
   text-align: center;
@@ -88,13 +158,24 @@ export const BuyBtn = styled.button`
   background-color: #c62828;
   color: #fff;
 
+  ${(prop) =>
+    prop.disabled &&
+    css`
+      opacity: 0.7;
+    `};
+
   &:hover {
-    background-color: #a91a1a;
+    background-color: ${(props) => (props.disabled ? "#c62828" : "#a91a1a")};
+    cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
   }
 `;
 
 export const SelectGroup = styled.div`
-  height: 80px;
+  height: 90px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -102,7 +183,7 @@ export const SelectGroup = styled.div`
 
 export const Select = styled.select`
   width: 70%;
-  height: 40px;
+  height: 60px;
   margin-top: 1em;
   font-size: 18px;
 `;

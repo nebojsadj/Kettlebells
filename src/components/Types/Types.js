@@ -30,11 +30,10 @@ function Types() {
         <Box>
           <img src={competition} alt={competition} />
           <Paragraph>
-            <strong>Competitive kettlebells</strong> are characterized by the
-            fact that regardless of the different weight, they all have the same
-            shape and size, so they differ in color. They have a slightly
-            thinner handle than regular weights. They are made for Girevoy
-            sport, but they are used in the same way as regular ones.
+            <strong>Competitive kettlebells</strong> are all the same size and
+            shape, differing in weight and color. They have a slightly thinner
+            handle. They are made for Girevoy sport, but they are used in the
+            same way as regular ones.
           </Paragraph>
           <Button onClick={() => history.push("/competition")}>
             View more
