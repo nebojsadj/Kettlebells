@@ -65,26 +65,22 @@ function Navbar({ secondRoute, toggle }) {
             )}
             {!secondRoute || (
               <NavItem>
-                <NavRoute to="/" onClick={() => Scroll.scrollToTop()}>
+                <NavRoute to="/" exact>
                   Home
                 </NavRoute>
               </NavItem>
             )}
 
             <NavItem>
-              <NavRoute to="/regular" onClick={() => Scroll.scrollToTop()}>
-                Regular
-              </NavRoute>
+              <NavRoute to="/regular">Regular</NavRoute>
             </NavItem>
             <NavItem>
-              <NavRoute to="/competition" onClick={() => Scroll.scrollToTop()}>
-                Competition
-              </NavRoute>
+              <NavRoute to="/competition">Competition</NavRoute>
             </NavItem>
           </NavMenu>
           <NavItem>
             <Link to="/contact">
-              <Button onClick={() => Scroll.scrollToTop()}>Contact</Button>
+              <Button>Contact</Button>
             </Link>
           </NavItem>
         </NavbarContainer>

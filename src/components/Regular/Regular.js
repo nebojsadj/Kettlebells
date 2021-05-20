@@ -40,7 +40,6 @@ function Regular() {
 
   return (
     <Container>
-      {" "}
       <Wrapper>
         <BoxLeft>
           <img src={regular} alt={regular} />

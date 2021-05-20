@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, useLocation } from "react-router-dom";
+import { animateScroll as Scroll } from "react-scroll";
 import Competition from "./components/Competition/Competition";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -19,7 +20,8 @@ function App() {
 
   useEffect(() => {
     pathname === "/" ? setSecondRoute(false) : setSecondRoute(true);
-  }, [pathname, sideOpen]);
+    Scroll.scrollToTop();
+  }, [pathname]);
 
   return (
     <>
