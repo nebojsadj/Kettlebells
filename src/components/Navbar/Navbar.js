@@ -6,13 +6,13 @@ import {
   NavMenu,
   NavItem,
   NavLink,
+  NavRoute,
   Button,
 } from "./NavbarStyle";
 import { animateScroll as Scroll } from "react-scroll";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Navbar({ secondRoute, more }) {
-  const history = useHistory();
+function Navbar({ secondRoute }) {
   return (
     <>
       <Nav>
@@ -61,17 +61,34 @@ function Navbar({ secondRoute, more }) {
                 </NavItem>
               </>
             )}
-            {more && (
+            {!secondRoute || (
               <NavItem>
-                <Button onClick={() => history.goBack()}>Go Back</Button>
+                <NavRoute
+                  to="/"
+                  exact="true"
+                  onClick={() => Scroll.scrollToTop()}
+                >
+                  Home
+                </NavRoute>
               </NavItem>
             )}
+
             <NavItem>
-              <Link to="/contact">
-                <Button onClick={() => Scroll.scrollToTop()}>Contact</Button>
-              </Link>
+              <NavRoute to="/regular" onClick={() => Scroll.scrollToTop()}>
+                Regular
+              </NavRoute>
+            </NavItem>
+            <NavItem>
+              <NavRoute to="/competition" onClick={() => Scroll.scrollToTop()}>
+                Competition
+              </NavRoute>
             </NavItem>
           </NavMenu>
+          <NavItem>
+            <Link to="/contact">
+              <Button onClick={() => Scroll.scrollToTop()}>Contact</Button>
+            </Link>
+          </NavItem>
         </NavbarContainer>
       </Nav>
     </>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { animateScroll as Scroll } from "react-scroll";
 import { Container, ButtonGroup, Button, Paragraph } from "./FooterStyle";
 
 function Footer() {
@@ -7,10 +8,20 @@ function Footer() {
   return (
     <Container>
       <ButtonGroup>
-        <Button onClick={() => history.push("/regular")}>
+        <Button
+          onClick={() => {
+            history.push("/regular");
+            Scroll.scrollToTop();
+          }}
+        >
           Regular Kettlebell
         </Button>
-        <Button onClick={() => history.push("/competition")}>
+        <Button
+          onClick={() => {
+            history.push("/competition");
+            Scroll.scrollToTop();
+          }}
+        >
           Competition Kettlebell
         </Button>
       </ButtonGroup>

@@ -18,11 +18,11 @@ function App() {
         <Contact />
       </Route>
       <Route path="/competition">
-        <Navbar secondRoute={true} more={true} />
+        <Navbar secondRoute={true} />
         <Competition />
       </Route>
       <Route path="/regular">
-        <Navbar secondRoute={true} more={true} />
+        <Navbar secondRoute={true} />
         <Regular />
       </Route>
       <Footer />
