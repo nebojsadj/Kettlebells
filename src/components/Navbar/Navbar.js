@@ -13,7 +13,7 @@ import {
 import { animateScroll as Scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 
-function Navbar({ secondRoute }) {
+function Navbar({ secondRoute, toggle }) {
   return (
     <>
       <Nav>
@@ -21,6 +21,7 @@ function Navbar({ secondRoute }) {
           <NavLogo to="/" onClick={() => Scroll.scrollToTop()}>
             Kettlebell
           </NavLogo>
+          <MobileIcon onClick={toggle} />
           <NavMenu>
             {secondRoute || (
               <>
@@ -64,11 +65,7 @@ function Navbar({ secondRoute }) {
             )}
             {!secondRoute || (
               <NavItem>
-                <NavRoute
-                  to="/"
-                  exact="true"
-                  onClick={() => Scroll.scrollToTop()}
-                >
+                <NavRoute to="/" onClick={() => Scroll.scrollToTop()}>
                   Home
                 </NavRoute>
               </NavItem>
@@ -90,7 +87,6 @@ function Navbar({ secondRoute }) {
               <Button onClick={() => Scroll.scrollToTop()}>Contact</Button>
             </Link>
           </NavItem>
-          <MobileIcon />
         </NavbarContainer>
       </Nav>
     </>
