@@ -1,9 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div`
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-`;
+export const Container = styled.div``;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -16,7 +13,7 @@ export const Wrapper = styled.div`
 
 export const BoxLeft = styled.div`
   flex: 50%;
-  padding: 5em;
+  padding: 1em 5em;
 
   img {
     width: 70%;
@@ -24,7 +21,7 @@ export const BoxLeft = styled.div`
     margin: auto;
   }
   @media screen and (max-width: 1440px) {
-    padding: 5em 2em;
+    padding: 2em 5em;
   }
 
   @media screen and (max-width: 1024px) {
@@ -40,11 +37,10 @@ export const BoxLeft = styled.div`
 
 export const BoxRight = styled.div`
   flex: 50%;
-  padding: 5em;
-  margin-top: 50px;
+  padding: 3.5em 5em;
 
   @media screen and (max-width: 1440px) {
-    padding: 5em 2em;
+    padding: 2em 5em;
   }
 
   @media screen and (max-width: 1024px) {
@@ -56,6 +52,7 @@ export const BoxRight = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
+    width: 83%;
     align-items: center;
     padding: 0 1em 3em 1em;
     select {
@@ -65,7 +62,7 @@ export const BoxRight = styled.div`
 `;
 
 export const BoxBottom = styled.div`
-  width: 70%;
+  width: 90%;
   border: 1px solid #000;
   margin: auto;
   margin-bottom: 5em;
@@ -78,7 +75,7 @@ export const BoxBottom = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    width: 60%;
+    width: 80%;
     padding: 1em 1em;
   }
 `;
@@ -191,4 +188,8 @@ export const Select = styled.select`
 export const Clear = styled.button`
   margin-top: 1em;
   justify-content: flex-start;
+`;
+
+export const Img = styled.img`
+  width: 100%;
 `;

@@ -5,6 +5,10 @@ export const Container = styled.div`
   background-color: #000;
   color: #fff;
   min-height: 400px;
+
+  img {
+    width: 100%;
+  }
 `;
 
 export const ListContainer = styled.div`

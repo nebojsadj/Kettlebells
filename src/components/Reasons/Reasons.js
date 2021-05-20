@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../pictures/work1.jpg";
 import {
   Container,
   ListContainer,
@@ -48,6 +49,7 @@ function Reasons() {
           </Li>
         </Ul>
       </ListContainer>
+      <img src={img} alt={img} />
     </Container>
   );
 }

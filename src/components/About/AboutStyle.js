@@ -51,7 +51,7 @@ export const Holder = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    height: 90vh;
   } ;
 `;
 

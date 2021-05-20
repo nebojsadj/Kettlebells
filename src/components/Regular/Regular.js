@@ -15,8 +15,10 @@ import {
   Input,
   SelectGroup,
   BuyBtn,
+  Img,
 } from "../Competition/CompetitionStyle";
 import regular from "../../pictures/rBells.jpeg";
+import img from "../../pictures/work3.jpg";
 
 function Regular() {
   const options = [
@@ -103,6 +105,7 @@ function Regular() {
           first run iron ore available, not scrap.
         </Paragraph>
       </BoxBottom>
+      <Img src={img} alt={img} />
     </Container>
   );
 }
