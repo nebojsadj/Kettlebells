@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { VscChromeClose } from "react-icons/vsc";
-import { NavLink as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Container = styled.aside`
@@ -34,12 +33,6 @@ export const NavMenu = styled.div``;
 
 export const NavItem = styled.div`
   margin-bottom: 3em;
-`;
-
-export const NavRoute = styled(LinkR)`
-  text-decoration: none;
-  color: #fff;
-  font-size: 24px;
 `;
 
 export const NavLink = styled(LinkS)`

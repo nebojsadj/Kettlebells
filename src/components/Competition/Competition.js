@@ -39,7 +39,7 @@ function Competition() {
   const total = selected * quantity;
 
   return (
-    <Container>
+    <Container id="competition">
       <Wrapper>
         <BoxLeft>
           <img src={competition} alt={competition} />

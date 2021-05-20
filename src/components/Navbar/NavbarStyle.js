@@ -59,17 +59,6 @@ export const NavLink = styled(LinkS)`
   cursor: pointer;
 `;
 
-export const NavRoute = styled(LinkR)`
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none;
-
-  & .active {
-    border-bottom: 2px solid #c62828;
-    padding-bottom: 5px;
-  }
-`;
-
 export const Button = styled.button`
   font-size: 1em;
   padding: 0.5em 0.8em;

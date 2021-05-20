@@ -6,7 +6,6 @@ import {
   NavMenu,
   NavItem,
   NavLink,
-  NavRoute,
   Button,
   MobileIcon,
 } from "./NavbarStyle";
@@ -23,59 +22,65 @@ function Navbar({ secondRoute, toggle }) {
           </NavLogo>
           <MobileIcon onClick={toggle} />
           <NavMenu>
-            {secondRoute || (
-              <>
-                <NavItem>
-                  <NavLink
-                    to="home"
-                    smooth={true}
-                    offset={-80}
-                    spy={true}
-                    exact="true"
-                    duration={1000}
-                  >
-                    Home
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    to="about"
-                    smooth={true}
-                    offset={-80}
-                    spy={true}
-                    exact="true"
-                    duration={1000}
-                  >
-                    About
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    to="types"
-                    smooth={true}
-                    offset={-80}
-                    spy={true}
-                    exact="true"
-                    duration={1000}
-                  >
-                    Types
-                  </NavLink>
-                </NavItem>
-              </>
-            )}
-            {!secondRoute || (
-              <NavItem>
-                <NavRoute to="/" exact>
-                  Home
-                </NavRoute>
-              </NavItem>
-            )}
-
             <NavItem>
-              <NavRoute to="/regular">Regular</NavRoute>
+              <NavLink
+                to="home"
+                smooth={true}
+                offset={-80}
+                spy={true}
+                exact="true"
+                duration={1000}
+              >
+                Home
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavRoute to="/competition">Competition</NavRoute>
+              <NavLink
+                to="about"
+                smooth={true}
+                offset={-80}
+                spy={true}
+                exact="true"
+                duration={1000}
+              >
+                About
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="types"
+                smooth={true}
+                offset={-80}
+                spy={true}
+                exact="true"
+                duration={1000}
+              >
+                Types
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="regular"
+                smooth={true}
+                offset={-80}
+                spy={true}
+                exact="true"
+                duration={1000}
+              >
+                Regular
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink
+                to="competition"
+                smooth={true}
+                offset={-80}
+                spy={true}
+                exact="true"
+                duration={1000}
+              >
+                Competition
+              </NavLink>
             </NavItem>
           </NavMenu>
           <NavItem>

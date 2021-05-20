@@ -6,12 +6,12 @@ import {
   NavItem,
   Button,
   NavLink,
-  NavRoute,
 } from "./SidebarStyle";
 import { useHistory } from "react-router-dom";
 
 function Sidebar({ toggle, sideOpen }) {
   const history = useHistory();
+
   return (
     <Container sideOpen={sideOpen} onClick={toggle}>
       <Icon onClick={toggle} />
@@ -59,10 +59,30 @@ function Sidebar({ toggle, sideOpen }) {
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavRoute to="/regular">Regular</NavRoute>
+          <NavLink
+            onClick={toggle}
+            to="regular"
+            smooth={true}
+            offset={-80}
+            spy={true}
+            exact="true"
+            duration={1000}
+          >
+            Regular
+          </NavLink>
         </NavItem>
         <NavItem>
-          <NavRoute to="/competition">Competition</NavRoute>
+          <NavLink
+            onClick={toggle}
+            to="competition"
+            smooth={true}
+            offset={-80}
+            spy={true}
+            exact="true"
+            duration={1000}
+          >
+            Competition
+          </NavLink>
         </NavItem>
         <NavItem>
           <Button
@@ -71,7 +91,7 @@ function Sidebar({ toggle, sideOpen }) {
               toggle();
             }}
           >
-            Contact
+            Contact Us
           </Button>
         </NavItem>
       </NavMenu>

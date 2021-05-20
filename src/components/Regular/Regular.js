@@ -39,7 +39,7 @@ function Regular() {
   const total = selected * quantity;
 
   return (
-    <Container>
+    <Container id="regular">
       <Wrapper>
         <BoxLeft>
           <img src={regular} alt={regular} />
