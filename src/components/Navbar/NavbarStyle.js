@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { NavLink as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export const Nav = styled.nav`
   background: #000;
@@ -43,6 +44,10 @@ export const NavMenu = styled.ul`
     border-bottom: 2px solid #c62828;
     padding-bottom: 5px;
   }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavItem = styled.li`
@@ -75,5 +80,25 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #a91a1a;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const MobileIcon = styled(GiHamburgerMenu)`
+  display: none;
+  color: #fff;
+  width: 36px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 60%);
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    display: block;
   }
 `;

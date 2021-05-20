@@ -8,6 +8,7 @@ import {
   NavLink,
   NavRoute,
   Button,
+  MobileIcon,
 } from "./NavbarStyle";
 import { animateScroll as Scroll } from "react-scroll";
 import { Link } from "react-router-dom";
@@ -89,6 +90,7 @@ function Navbar({ secondRoute }) {
               <Button onClick={() => Scroll.scrollToTop()}>Contact</Button>
             </Link>
           </NavItem>
+          <MobileIcon />
         </NavbarContainer>
       </Nav>
     </>
