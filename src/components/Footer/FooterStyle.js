@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 export const Container = styled.div`
   background-color: #000;
@@ -13,18 +14,15 @@ export const ButtonGroup = styled.div`
   align-items: center;
 `;
 
-export const Button = styled.button`
-  font-size: 1em;
-  padding: 0.5em 0.5em;
+export const NavLink = styled(Link)`
+  font-size: 1.2em;
+  margin: 20px auto;
   cursor: pointer;
   border: none;
-  background-color: #c62828;
   color: #fff;
-  margin-left: 1em;
-  width: 11em;
 
   &:hover {
-    background-color: #a91a1a;
+    color: #a91a1a;
   }
 `;
 

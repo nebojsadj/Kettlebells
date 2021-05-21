@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 export const Container = styled.div`
   background-color: #fff;
@@ -65,7 +66,7 @@ export const Box = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const NavLink = styled(Link)`
   font-size: 1.5em;
   padding: 0.5em 0.8em;
   margin: 30px auto;

@@ -5,14 +5,12 @@ import {
   Box,
   Heading,
   Paragraph,
-  Button,
+  NavLink,
 } from "./TypesStyle";
 import regular from "../../pictures/regular.png";
 import competition from "../../pictures/competition.jpg";
-import { useHistory } from "react-router-dom";
 
 function Types() {
-  const history = useHistory();
   return (
     <Container id="types">
       <Heading>We distinguish two types of kettlebells</Heading>
@@ -25,7 +23,16 @@ function Types() {
             kettlebells but have a slightly thicker handle. They are used in
             Cross Fit and various strength trainings.
           </Paragraph>
-          <Button onClick={() => history.push("/regular")}>View more</Button>
+          <NavLink
+            to="regular"
+            smooth={true}
+            offset={-80}
+            spy={true}
+            exact="true"
+            duration={1000}
+          >
+            View More
+          </NavLink>
         </Box>
         <Box>
           <img src={competition} alt={competition} />
@@ -35,9 +42,16 @@ function Types() {
             handle. They are made for Girevoy sport, but they are used in the
             same way as regular ones.
           </Paragraph>
-          <Button onClick={() => history.push("/competition")}>
-            View more
-          </Button>
+          <NavLink
+            to="competition"
+            smooth={true}
+            offset={-80}
+            spy={true}
+            exact="true"
+            duration={1000}
+          >
+            View More
+          </NavLink>
         </Box>
       </BoxContainer>
     </Container>

@@ -1,18 +1,30 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-import { Container, ButtonGroup, Button, Paragraph } from "./FooterStyle";
+import { Container, ButtonGroup, NavLink, Paragraph } from "./FooterStyle";
 
 function Footer() {
-  const history = useHistory();
   return (
     <Container>
       <ButtonGroup>
-        <Button onClick={() => history.push("/regular")}>
+        <NavLink
+          to="regular"
+          smooth={true}
+          offset={-80}
+          spy={true}
+          exact="true"
+          duration={1000}
+        >
           Regular Kettlebell
-        </Button>
-        <Button onClick={() => history.push("/competition")}>
+        </NavLink>
+        <NavLink
+          to="competition"
+          smooth={true}
+          offset={-80}
+          spy={true}
+          exact="true"
+          duration={1000}
+        >
           Competition Kettlebell
-        </Button>
+        </NavLink>
       </ButtonGroup>
       <hr style={{ width: "70%", margin: "auto" }} />
       <Paragraph>DjordjevicN</Paragraph>
