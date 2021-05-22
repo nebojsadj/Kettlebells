@@ -9,6 +9,19 @@ export const Container = styled.div`
   img {
     width: 100%;
   }
+  @media screen and (max-width: 425px) {
+    h2 {
+      font-size: 1.3em;
+    }
+    li {
+      font-size: 1.1em;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    h2 {
+      font-size: 1.2em;
+    }
+  }
 `;
 
 export const ListContainer = styled.div`

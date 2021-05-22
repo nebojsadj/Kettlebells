@@ -29,6 +29,15 @@ export const Container = styled.div`
       margin-bottom: 3em;
     }
   }
+  @media screen and (max-width: 425px) {
+    h2 {
+      font-size: 1.4em;
+    }
+    p {
+      font-size: 1.4em;
+    }
+    min-height: 900px;
+  }
 `;
 
 export const Heading = styled.h2`
@@ -44,20 +53,53 @@ export const Paragraph = styled.p`
 `;
 
 export const Form = styled.form`
-  width: 25rem;
+  width: 23%;
   background-color: #000;
   margin: 20px auto;
   padding: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 1440px) {
+    width: 30%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 40%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 55%;
+  }
+  @media screen and (max-width: 425px) {
+    width: 90%;
+    h2 {
+      font-size: 1.2em;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    width: 95%;
+  }
 `;
 
 export const Input = styled.input`
   width: 100%;
-  height: 40px;
+  height: 50px;
   margin: 20px;
-  font-size: 18px;
+  font-size: 20px;
+
+  &:focus {
+    box-shadow: 0 0 9px white;
+  }
+  @media screen and (max-width: 425px) {
+    height: 40px;
+  }
+`;
+
+export const TextArea = styled.textarea`
+  width: 100%;
+  height: 80px;
+  margin: 20px;
+  font-size: 20px;
 
   &:focus {
     box-shadow: 0 0 9px white;

@@ -14,6 +14,22 @@ export const Container = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
+  }
+  @media screen and (max-width: 425px) {
+    height: 1250px;
+    h2 {
+      font-size: 1.3em;
+      margin: 20px auto;
+      margin-top: 2em;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    height: 1300px;
+    h2 {
+      font-size: 1.2em;
+      margin: 20px auto;
+      margin-top: 2em;
+    }
   } ;
 `;
 
@@ -29,7 +45,7 @@ export const Paragraph = styled.p`
 
 export const BoxTop = styled.div`
   flex: 100%;
-  padding: 3em 5em 3em 5em;
+  padding: 1em 1.5em;
 
   @media screen and (max-width: 1440px) {
     p {
@@ -44,6 +60,18 @@ export const BoxTop = styled.div`
   @media screen and (max-width: 768px) {
     padding-top: 0;
   }
+  @media screen and (max-width: 425px) {
+    p {
+      font-size: 1em;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    p {
+      font-size: 15px;
+    }
+    padding-bottom: 0;
+    /* height: 500px; */
+  } ;
 `;
 
 export const Holder = styled.div`
@@ -69,6 +97,14 @@ export const BoxLeft = styled.div`
   }
   @media screen and (max-width: 768px) {
     padding: 0 5em;
+    margin-top: 4em;
+  }
+  @media screen and (max-width: 425px) {
+    margin-top: 0;
+    padding: 0 1.5em;
+    img {
+      margin-top: 1.4em;
+    }
   } ;
 `;
 
@@ -87,7 +123,11 @@ export const BoxRight = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 3em 5em 0 5em;
+    padding: 0 5em 0 5em;
     margin-bottom: 7em;
+  }
+  @media screen and (max-width: 425px) {
+    padding: 0 1.5em 1em 1.5em;
+    margin-bottom: 2em;
   } ;
 `;

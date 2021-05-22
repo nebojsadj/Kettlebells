@@ -85,7 +85,7 @@ function Navbar({ secondRoute, toggle }) {
           </NavMenu>
           <NavItem>
             <Link to="/contact">
-              <Button>Contact</Button>
+              <Button>Contact Us</Button>
             </Link>
           </NavItem>
         </NavbarContainer>

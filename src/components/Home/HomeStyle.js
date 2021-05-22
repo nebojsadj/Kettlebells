@@ -27,7 +27,31 @@ export const Container = styled.div`
     p {
       font-size: 1.5em;
     }
-  } ;
+  }
+  @media screen and (max-width: 425px) {
+    min-height: 400px;
+    h1 {
+      font-size: 1.2em;
+    }
+    p {
+      font-size: 1em;
+    }
+    button {
+      font-size: 1.2em;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding: 0.3em 0.5em;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    h1 {
+      font-size: 1em;
+    }
+    button {
+      font-size: 1em;
+    }
+  }
 `;
 
 export const BoxLeft = styled.div`
@@ -43,6 +67,12 @@ export const BoxLeft = styled.div`
   }
   @media screen and (max-width: 768px) {
     padding: 3em 5em 3em 5em;
+  }
+  @media screen and (max-width: 425px) {
+    padding: 1.5em 1em;
+    hr {
+      margin-top: 10px;
+    }
   } ;
 `;
 
@@ -65,6 +95,12 @@ export const BoxRight = styled.div`
       margin-top: -30px;
     }
   }
+  @media screen and (max-width: 425px) {
+    img {
+      width: 80%;
+      margin-top: 0;
+    }
+  } ;
 `;
 
 export const Heading = styled.h1`

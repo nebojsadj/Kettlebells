@@ -1,6 +1,23 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  @media screen and (max-width: 425px) {
+    h2 {
+      font-size: 1.3em;
+    }
+    p {
+      font-size: 1em;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    h2 {
+      font-size: 1.1em;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 15px;
+  }
+`;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -33,6 +50,9 @@ export const BoxLeft = styled.div`
       width: 80%;
     }
   }
+  @media screen and (max-width: 425px) {
+    padding: 2em 1.5em 0 1.5em;
+  }
 `;
 
 export const BoxRight = styled.div`
@@ -59,6 +79,17 @@ export const BoxRight = styled.div`
       width: 100%;
     }
   }
+  @media screen and (max-width: 425px) {
+    padding: 0 0 3em 0;
+    h2 {
+      font-size: 1.3em;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    h2 {
+      font-size: 1.2em;
+    }
+  }
 `;
 
 export const BoxBottom = styled.div`
@@ -77,6 +108,15 @@ export const BoxBottom = styled.div`
   @media screen and (max-width: 768px) {
     width: 80%;
     padding: 1em 1em;
+  }
+  @media screen and (max-width: 425px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 375px) {
+    margin-bottom: 3em;
+  }
+  @media screen and (max-width: 320px) {
+    margin-bottom: 2em;
   }
 `;
 
@@ -105,6 +145,12 @@ export const Holder = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: 100%;
+  }
+  @media screen and (max-width: 425px) {
+    p {
+      margin-bottom: 5px;
+      font-size: 1.3em;
+    }
   }
 `;
 

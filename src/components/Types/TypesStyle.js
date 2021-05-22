@@ -4,6 +4,22 @@ import { Link } from "react-scroll";
 export const Container = styled.div`
   background-color: #fff;
   min-height: 550px;
+
+  @media screen and (max-width: 425px) {
+    height: 1080px;
+    h2 {
+      font-size: 1.3em;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    height: 980px;
+    h2 {
+      font-size: 1.2em;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    height: 920px;
+  }
 `;
 
 export const BoxContainer = styled.div`
@@ -45,7 +61,7 @@ export const Box = styled.div`
     }
   }
   @media screen and (max-width: 1024px) {
-    button {
+    a {
       margin-bottom: 0;
     }
     p {
@@ -60,10 +76,41 @@ export const Box = styled.div`
     img {
       margin-top: 5em;
     }
-    button {
+    a {
       margin-bottom: 30px;
     }
   }
+  @media screen and (max-width: 425px) {
+    padding: 0 1.5em;
+    p {
+      font-size: 1em;
+    }
+    img {
+      margin: 40px auto;
+      width: 60%;
+    }
+    a {
+      font-size: 1.2em;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    img {
+      margin: 40px auto;
+      width: 50%;
+    }
+    a {
+      font-size: 1em;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    img {
+      margin: 30px auto;
+      width: 50%;
+    }
+    a {
+      font-size: 15px;
+    }
+  } ;
 `;
 
 export const NavLink = styled(Link)`

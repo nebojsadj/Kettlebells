@@ -12,6 +12,17 @@ export const ButtonGroup = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 375px) {
+    a {
+      font-size: 1em;
+    }
+    height: 60px;
+  }
+  @media screen and (max-width: 320px) {
+    a {
+      font-size: 15px;
+    }
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -30,4 +41,10 @@ export const Paragraph = styled.p`
   text-align: center;
   color: #fff;
   padding: 20px;
+  @media screen and (max-width: 375px) {
+    padding: 0.8em;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 15px;
+  }
 `;

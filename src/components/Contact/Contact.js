@@ -10,6 +10,7 @@ import {
   Holder,
   Email,
   Phone,
+  TextArea,
 } from "./ContactStyle";
 import contactUs from "../../pictures/contactUs.svg";
 
@@ -27,6 +28,7 @@ function Contact() {
         <Input type="text" placeholder="name" />
         <Input type="text" placeholder="surname" />
         <Input type="email" placeholder="email" />
+        <TextArea placeholder="message" />
         <Button>Submit</Button>
         <Holder>
           <Location /> 44 street name
