@@ -6,19 +6,19 @@ export const Container = styled.div`
   min-height: 550px;
 
   @media screen and (max-width: 425px) {
-    height: 1080px;
+    min-height: 1080px;
     h2 {
       font-size: 1.3em;
     }
   }
-  @media screen and (max-width: 425px) {
-    height: 980px;
+  @media screen and (max-width: 375px) {
+    min-height: 950px;
     h2 {
       font-size: 1.2em;
     }
   }
   @media screen and (max-width: 320px) {
-    height: 920px;
+    min-height: 900px;
   }
 `;
 
@@ -30,6 +30,9 @@ export const BoxContainer = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     margin-bottom: 4em;
+  }
+  @media screen and (max-width: 375px) {
+    margin-bottom: 1em;
   }
 `;
 

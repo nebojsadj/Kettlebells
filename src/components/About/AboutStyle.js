@@ -16,21 +16,30 @@ export const Container = styled.div`
     flex-direction: column;
   }
   @media screen and (max-width: 425px) {
-    height: 1250px;
+    height: 1100px;
     h2 {
       font-size: 1.3em;
       margin: 20px auto;
       margin-top: 2em;
     }
   }
+  @media screen and (max-width: 375px) {
+    height: 1150px;
+  }
+  @media screen and (max-width: 360px) {
+    height: 1140px;
+  }
   @media screen and (max-width: 320px) {
-    height: 1300px;
+    height: 1200px;
     h2 {
       font-size: 1.2em;
       margin: 20px auto;
       margin-top: 2em;
     }
-  } ;
+  }
+  @media screen and (max-width: 280px) {
+    height: 1240px;
+  }
 `;
 
 export const Heading = styled.h2`
@@ -70,7 +79,6 @@ export const BoxTop = styled.div`
       font-size: 15px;
     }
     padding-bottom: 0;
-    /* height: 500px; */
   } ;
 `;
 
@@ -80,7 +88,7 @@ export const Holder = styled.div`
     display: flex;
     flex-direction: column;
     height: 90vh;
-  } ;
+  }
 `;
 
 export const BoxLeft = styled.div`
@@ -102,10 +110,10 @@ export const BoxLeft = styled.div`
   @media screen and (max-width: 425px) {
     margin-top: 0;
     padding: 0 1.5em;
-    img {
-      margin-top: 1.4em;
-    }
-  } ;
+  }
+  @media screen and (max-width: 425px) {
+    margin-top: 1.2em;
+  }
 `;
 
 export const BoxRight = styled.div`
@@ -127,7 +135,8 @@ export const BoxRight = styled.div`
     margin-bottom: 7em;
   }
   @media screen and (max-width: 425px) {
-    padding: 0 1.5em 1em 1.5em;
+    padding: 0 1.5em;
+    margin-top: 1em;
     margin-bottom: 2em;
-  } ;
+  }
 `;

@@ -86,12 +86,17 @@ export const Input = styled.input`
   height: 50px;
   margin: 20px;
   font-size: 20px;
+  padding-left: 0.7em;
 
   &:focus {
     box-shadow: 0 0 9px white;
   }
   @media screen and (max-width: 425px) {
     height: 40px;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 320px) {
+    height: 35px;
   }
 `;
 
@@ -100,9 +105,14 @@ export const TextArea = styled.textarea`
   height: 80px;
   margin: 20px;
   font-size: 20px;
+  padding-top: 0.7em;
+  padding-left: 0.7em;
 
   &:focus {
     box-shadow: 0 0 9px white;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 18px;
   }
 `;
 

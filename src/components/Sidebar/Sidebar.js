@@ -91,7 +91,7 @@ function Sidebar({ toggle, sideOpen }) {
               toggle();
             }}
           >
-            Contact Us
+            Contact
           </Button>
         </NavItem>
       </NavMenu>
