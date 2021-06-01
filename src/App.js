@@ -6,6 +6,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Kettlebells from "./components/Kettlebells/Kettlebells";
 import Navbar from "./components/Navbar/Navbar";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
   const [sideOpen, setSideOpen] = useState(false);
@@ -29,6 +30,7 @@ function App() {
   return (
     <>
       <Navbar secondRoute={secondRoute} toggle={toggle} />
+      <Sidebar toggle={toggle} sideOpen={sideOpen} />
       <Route path="/" exact>
         <Kettlebells forBuy={forBuy} />
       </Route>
