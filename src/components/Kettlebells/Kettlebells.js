@@ -6,15 +6,15 @@ import Reasons from "../Reasons/Reasons";
 import Regular from "../Regular/Regular";
 import Types from "../Types/Types";
 
-function Kettlebells() {
+function Kettlebells({ forBuy }) {
   return (
     <>
       <Home />
       <About />
       <Types />
       <Reasons />
-      <Regular />
-      <Competition />
+      <Regular forBuy={forBuy} />
+      <Competition forBuy={forBuy} />
     </>
   );
 }

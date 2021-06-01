@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Container,
   BoxLeft,
@@ -17,8 +17,9 @@ import {
   BuyBtn,
 } from "./CompetitionStyle";
 import competition from "../../pictures/cBells.png";
+import { useHistory } from "react-router-dom";
 
-function Competition() {
+function Competition({ forBuy }) {
   const options = [
     { value: 0, name: "Choose an option" },
     { value: 8, name: "8 kg" },
@@ -29,14 +30,26 @@ function Competition() {
     { value: 28, name: "28 kg" },
     { value: 32, name: "32 kg" },
   ];
+  const history = useHistory();
   const [selected, setSelected] = useState(0);
   const [quantity, setQuantity] = useState(1);
+  const selectRef = useRef(null);
 
   const onSelected = (e) => {
     setSelected(3.25 * e.target.value);
     setQuantity(1);
   };
   const total = selected * quantity;
+
+  const buy = () => {
+    history.push("/buy");
+    forBuy({
+      type: "Competition kettlebell",
+      weight: selectRef.current.value,
+      quantity: quantity,
+      total: total.toFixed(2),
+    });
+  };
 
   return (
     <Container id="competition">
@@ -54,7 +67,7 @@ function Competition() {
           </Paragraph>
           <Paragraph>kg</Paragraph>
           <SelectGroup>
-            <Select onChange={onSelected}>
+            <Select ref={selectRef} onChange={onSelected}>
               {options.map((option) => (
                 <option key={option.name} value={option.value}>
                   {option.name}
@@ -76,7 +89,9 @@ function Competition() {
               <Button onClick={() => setQuantity(quantity + 1)}>+</Button>
             </ButtonGroup>
             <Paragraph>{total > 0 && `Total: ${total.toFixed(2)} $`}</Paragraph>
-            <BuyBtn disabled={!total > 0}>Buy</BuyBtn>
+            <BuyBtn onClick={buy} disabled={!total > 0}>
+              Buy
+            </BuyBtn>
           </Holder>
         </BoxRight>
       </Wrapper>
