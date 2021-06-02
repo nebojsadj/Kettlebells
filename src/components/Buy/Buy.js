@@ -18,10 +18,6 @@ function Buy({ order, setOrder }) {
   const deleteItem = (index) => {
     const items = order.filter((el) => el !== order[index]);
     setOrder([...items]);
-
-    if (items.length === 0) {
-      history.goBack();
-    }
   };
 
   const price = () => {
@@ -39,40 +35,52 @@ function Buy({ order, setOrder }) {
   return (
     <Container>
       <Box>
-        <h2>Thank you for your trust.</h2>
-        <h3>This is your order</h3>
+        {order.length === 0 ? (
+          <h2 style={{ color: "red" }}>Your cart is empty!</h2>
+        ) : (
+          <>
+            <h2>Thank you for your trust.</h2>
+            <h3>This is your order</h3>
+          </>
+        )}
       </Box>
-      <Table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Type</th>
-            <th>Weight</th>
-            <th>Quantity</th>
-            <th>Total</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {order.map((el, i) => (
-            <tr key={i}>
-              <td>{i + 1}</td>
-              <td>{el.type}</td>
-              <td>{`${el.weight} kg`}</td>
-              <td>{el.quantity}</td>
-              <td>{`${el.total} $`}</td>
-              <td>
-                <Delete onClick={() => deleteItem(i)} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-      <ButtonGroup>
-        <ButtonOrder onClick={() => history.goBack()}>Order More</ButtonOrder>
-        <TotalPrice>{`Total Price: ${total} $`}</TotalPrice>
-        <ButtonConfirm>Confirm Order</ButtonConfirm>
-      </ButtonGroup>
+      {order.length !== 0 && (
+        <>
+          <Table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Type</th>
+                <th>Weight</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {order.map((el, i) => (
+                <tr key={i}>
+                  <td>{i + 1}</td>
+                  <td>{el.type}</td>
+                  <td>{`${el.weight} kg`}</td>
+                  <td>{el.quantity}</td>
+                  <td>{`${el.total} $`}</td>
+                  <td>
+                    <Delete onClick={() => deleteItem(i)} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+          <ButtonGroup>
+            <ButtonOrder onClick={() => history.goBack()}>
+              Order More
+            </ButtonOrder>
+            <TotalPrice>{`Total Price: ${total} $`}</TotalPrice>
+            <ButtonConfirm>Confirm Order</ButtonConfirm>
+          </ButtonGroup>
+        </>
+      )}
     </Container>
   );
 }

@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { NavLink as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { FaCartArrowDown } from "react-icons/fa";
+import { MdContactMail } from "react-icons/md";
 
 export const Nav = styled.nav`
   background: #000;
@@ -59,18 +61,9 @@ export const NavLink = styled(LinkS)`
   cursor: pointer;
 `;
 
-export const Button = styled.button`
-  font-size: 1em;
-  padding: 0.5em 0.8em;
-  cursor: pointer;
-  border: none;
-  background-color: #c62828;
-  color: #fff;
-
-  &:hover {
-    background-color: #a91a1a;
-  }
-
+export const NavGroup = styled.div`
+  display: flex;
+  align-items: center;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -89,5 +82,43 @@ export const MobileIcon = styled(GiHamburgerMenu)`
 
   @media screen and (max-width: 768px) {
     display: block;
+  }
+`;
+
+export const Cart = styled(FaCartArrowDown)`
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #fff;
+
+  &:hover {
+    color: #a91a1a;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 60px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 50px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 40px;
+  }
+`;
+
+export const ContactUs = styled(MdContactMail)`
+  font-size: 1.6em;
+  cursor: pointer;
+  color: #fff;
+
+  &:hover {
+    color: #a91a1a;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 60px;
+  }
+  @media screen and (max-width: 375px) {
+    font-size: 50px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 40px;
   }
 `;

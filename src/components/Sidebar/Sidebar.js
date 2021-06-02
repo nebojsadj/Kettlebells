@@ -1,13 +1,7 @@
 import React from "react";
-import {
-  Container,
-  Icon,
-  NavMenu,
-  NavItem,
-  Button,
-  NavLink,
-} from "./SidebarStyle";
+import { Container, Icon, NavMenu, NavItem, NavLink } from "./SidebarStyle";
 import { useHistory } from "react-router-dom";
+import { Cart, ContactUs } from "../Navbar/NavbarStyle";
 
 function Sidebar({ toggle, sideOpen }) {
   const history = useHistory();
@@ -85,14 +79,20 @@ function Sidebar({ toggle, sideOpen }) {
           </NavLink>
         </NavItem>
         <NavItem>
-          <Button
+          <ContactUs
             onClick={() => {
               history.push("/contact");
               toggle();
             }}
-          >
-            Contact
-          </Button>
+          />
+        </NavItem>
+        <NavItem>
+          <Cart
+            onClick={() => {
+              history.push("/buy");
+              toggle();
+            }}
+          />
         </NavItem>
       </NavMenu>
     </Container>

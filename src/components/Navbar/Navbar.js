@@ -6,8 +6,10 @@ import {
   NavMenu,
   NavItem,
   NavLink,
-  Button,
+  NavGroup,
   MobileIcon,
+  Cart,
+  ContactUs,
 } from "./NavbarStyle";
 import { animateScroll as Scroll } from "react-scroll";
 import { Link } from "react-router-dom";
@@ -85,11 +87,18 @@ function Navbar({ secondRoute, toggle }) {
               </NavItem>
             </NavMenu>
           )}
-          <NavItem>
-            <Link to="/contact">
-              <Button>Contact</Button>
-            </Link>
-          </NavItem>
+          <NavGroup>
+            <NavItem>
+              <Link to="/contact">
+                <ContactUs />
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/buy">
+                <Cart />
+              </Link>
+            </NavItem>
+          </NavGroup>
         </NavbarContainer>
       </Nav>
     </>

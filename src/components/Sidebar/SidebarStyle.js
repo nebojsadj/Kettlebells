@@ -39,16 +39,3 @@ export const NavLink = styled(LinkS)`
   cursor: pointer;
   font-size: 24px;
 `;
-
-export const Button = styled.button`
-  font-size: 1.5em;
-  padding: 0.7em 1.6em;
-  cursor: pointer;
-  border: none;
-  background-color: #c62828;
-  color: #fff;
-
-  &:hover {
-    background-color: #a91a1a;
-  }
-`;
