@@ -11,7 +11,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 function App() {
   const [sideOpen, setSideOpen] = useState(false);
   const [secondRoute, setSecondRoute] = useState(true);
-  const [order, setOrder] = useState({});
+  const [order, setOrder] = useState([]);
   const { pathname } = useLocation();
 
   const toggle = () => {
@@ -19,7 +19,7 @@ function App() {
   };
 
   const forBuy = (buy) => {
-    setOrder(buy);
+    setOrder([...order, buy]);
   };
 
   useEffect(() => {
@@ -38,7 +38,7 @@ function App() {
         <Contact />
       </Route>
       <Route path="/buy">
-        <Buy order={order} />
+        <Buy order={order} setOrder={setOrder} />
       </Route>
       <Footer />
     </>
