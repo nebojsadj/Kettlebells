@@ -5,7 +5,7 @@ import {
   Box,
   Table,
   ButtonGroup,
-  ButtonDelete,
+  ButtonOrder,
   Delete,
   TotalPrice,
   ButtonConfirm,
@@ -14,11 +14,6 @@ import {
 function Buy({ order, setOrder }) {
   const history = useHistory();
   const [total, setTotal] = useState(0);
-
-  const deleteOrder = () => {
-    setOrder([]);
-    history.goBack();
-  };
 
   const deleteItem = (index) => {
     const items = order.filter((el) => el !== order[index]);
@@ -74,7 +69,7 @@ function Buy({ order, setOrder }) {
         </tbody>
       </Table>
       <ButtonGroup>
-        <ButtonDelete onClick={deleteOrder}>Delete Order</ButtonDelete>
+        <ButtonOrder onClick={() => history.goBack()}>Order More</ButtonOrder>
         <TotalPrice>{`Total Price: ${total} $`}</TotalPrice>
         <ButtonConfirm>Confirm Order</ButtonConfirm>
       </ButtonGroup>

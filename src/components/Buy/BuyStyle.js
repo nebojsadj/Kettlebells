@@ -70,13 +70,13 @@ export const ButtonGroup = styled.div`
   align-items: center;
 `;
 
-export const ButtonDelete = styled.button`
+export const ButtonOrder = styled.button`
   font-size: 1.2em;
   padding: 0.4em;
   cursor: pointer;
 
   &:hover {
-    background-color: #a91a1a;
+    background-color: lightgreen;
   }
   @media screen and (max-width: 425px) {
     font-size: 15px;
@@ -113,8 +113,4 @@ export const TotalPrice = styled.p`
   }
 `;
 
-export const ButtonConfirm = styled(ButtonDelete)`
-  &:hover {
-    background-color: green;
-  }
-`;
+export const ButtonConfirm = styled(ButtonOrder)``;
