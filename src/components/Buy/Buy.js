@@ -9,11 +9,13 @@ import {
   Delete,
   TotalPrice,
   ButtonConfirm,
+  Confirm,
 } from "./BuyStyle";
 
 function Buy({ order, setOrder }) {
   const history = useHistory();
   const [total, setTotal] = useState(0);
+  const [confirm, setConfirm] = useState(true);
 
   const deleteItem = (index) => {
     const items = order.filter((el) => el !== order[index]);
@@ -24,13 +26,20 @@ function Buy({ order, setOrder }) {
     const prices = order.map((el) => parseInt(el.total));
     const totalPrices =
       order.length > 0 ? prices.reduce((a, b) => a + b) : null;
-    console.log(totalPrices);
     setTotal(totalPrices);
   };
 
   useEffect(() => {
     price();
   });
+
+  const successfully = () => {
+    setTimeout(() => {
+      setConfirm(false);
+      setOrder([]);
+      history.push("/");
+    }, 5000);
+  };
 
   return (
     <Container>
@@ -77,10 +86,21 @@ function Buy({ order, setOrder }) {
               Order More
             </ButtonOrder>
             <TotalPrice>{`Total Price: ${total} $`}</TotalPrice>
-            <ButtonConfirm>Confirm Order</ButtonConfirm>
+            <ButtonConfirm
+              onClick={() => {
+                setConfirm(true);
+                successfully();
+              }}
+            >
+              Confirm Order
+            </ButtonConfirm>
           </ButtonGroup>
         </>
       )}
+      <Confirm confirm={confirm}>
+        <h2>Thank you for confirming the order!</h2>
+        <h2>Soon someone from our team will contact you!</h2>
+      </Confirm>
     </Container>
   );
 }

@@ -114,3 +114,47 @@ export const TotalPrice = styled.p`
 `;
 
 export const ButtonConfirm = styled(ButtonOrder)``;
+
+export const Confirm = styled.div`
+  position: fixed;
+  width: 50%;
+  height: 25%;
+  box-shadow: 0 0 5px;
+  background-color: lightgreen;
+  top: 25%;
+  left: 25%;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  visibility: ${({ confirm }) => !confirm && "hidden"};
+  cursor: pointer;
+
+  @media screen and (max-width: 1024px) {
+    width: 70%;
+    left: 15%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    left: 10%;
+    font-size: 1em;
+  }
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    height: 15%;
+    left: 10%;
+    font-size: 1em;
+  }
+  @media screen and (max-width: 425px) {
+    width: 90%;
+    left: 5%;
+    font-size: 0.6em;
+  }
+  @media screen and (max-width: 320px) {
+    width: 90%;
+    left: 5%;
+    font-size: 0.5em;
+  }
+`;
