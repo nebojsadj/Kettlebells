@@ -15,7 +15,7 @@ import {
 function Buy({ order, setOrder }) {
   const history = useHistory();
   const [total, setTotal] = useState(0);
-  const [confirm, setConfirm] = useState(true);
+  const [confirm, setConfirm] = useState(false);
 
   const deleteItem = (index) => {
     const items = order.filter((el) => el !== order[index]);
