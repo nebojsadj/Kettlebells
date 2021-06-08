@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Styled-component and React-scroll demo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
